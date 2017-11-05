@@ -1,8 +1,5 @@
 package ensoCosmosQuiz.models;
 
-import com.microsoft.azure.spring.data.documentdb.core.mapping.Document;
-
-@Document(collection = "<COLLECTION>")
 public class Movie {
 	private String id;
 	private String original_title;

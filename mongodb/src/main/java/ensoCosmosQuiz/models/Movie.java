@@ -3,15 +3,15 @@ package ensoCosmosQuiz.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "test_collection")
+@Document(collection = "<COLLECTION>")
 public class Movie {
 	@Id
 	private String id;
 	private String original_title;
 
-	public Movie(String id, String title) {
+	public Movie(String id, String original_title) {
 		this.id = id;
-		this.original_title = title;
+		this.original_title = original_title;
 	}
 
 	@Override

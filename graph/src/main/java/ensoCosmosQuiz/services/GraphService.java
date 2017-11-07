@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -45,20 +46,6 @@ public class GraphService {
             return result.toString();
         } catch (Exception e){
             return e.getMessage();
-        }
-    }
-
-    public List<Result> getAll(){
-        try {
-            CompletableFuture<List<Result>> completableFutureResults = getClient().submit("g.V()").all();
-            List<Result> resultList = completableFutureResults.get();
-            for (Result result : resultList) {
-                System.out.println("\nQuery result:");
-                System.out.println(result.toString());
-            }
-            return resultList;
-        } catch (Exception e){
-            return new ArrayList<>();
         }
     }
 }
